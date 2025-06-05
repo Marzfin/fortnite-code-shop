@@ -1,42 +1,142 @@
 body {
-  font-family: "Segoe UI", "Yu Gothic", sans-serif;
-  background: #f7f7f7;
+  font-family: "Segoe UI", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  background: linear-gradient(120deg, #f0f4ff 0%, #eaf6fb 100%);
   margin: 0;
   padding: 0;
 }
+
 header {
-  background: #282c34;
+  background: linear-gradient(90deg, #283e51 0%, #485563 100%);
   color: white;
-  padding: 1em;
+  padding: 1.5em 0 1em 0;
+  box-shadow: 0 2px 12px rgba(40, 62, 81, 0.1);
 }
+
+header h1 {
+  margin: 0 0 0.5em 0;
+  font-size: 2.2em;
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+nav {
+  margin-top: 0.5em;
+}
+
 nav a {
   color: #fff;
-  margin: 0 1em;
+  margin: 0 1.3em;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  position: relative;
+  transition: color 0.2s;
 }
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #37a7e5;
+  transition: width 0.3s;
+  margin: 0 auto;
+}
+nav a:hover {
+  color: #37a7e5;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
 main {
-  max-width: 800px;
-  margin: 2em auto;
+  max-width: 850px;
+  margin: 2.5em auto;
   background: #fff;
-  padding: 2em;
-  border-radius: 8px;
+  padding: 2.5em 2em;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(55, 167, 229, 0.08), 0 1.5px 8px rgba(40, 62, 81, 0.10);
 }
+
+h2 {
+  color: #283e51;
+  margin-bottom: 1.6em;
+  font-size: 1.6em;
+}
+
 .item {
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 1em;
-  padding-bottom: 1em;
+  border-bottom: 1px solid #e3e9ef;
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  background: #f8fbff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(55, 167, 229, 0.06);
+  transition: box-shadow 0.3s, transform 0.2s;
 }
+.item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.item:hover {
+  box-shadow: 0 6px 24px rgba(55, 167, 229, 0.13);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.item img {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(40, 62, 81, 0.10);
+  margin-bottom: 1em;
+  max-width: 100%;
+}
+
 .order-btn {
   display: inline-block;
-  background: #37a7e5;
+  background: linear-gradient(90deg, #37a7e5 0%, #2f87c5 100%);
   color: white;
-  padding: 0.8em 2em;
-  border-radius: 4px;
+  padding: 0.9em 2.3em;
+  border-radius: 8px;
   text-decoration: none;
-  margin-top: 1em;
+  margin-top: 1.2em;
+  font-size: 1.08em;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  box-shadow: 0 2px 12px rgba(55, 167, 229, 0.13);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  border: none;
+  cursor: pointer;
 }
+.order-btn:hover {
+  background: linear-gradient(90deg, #2f87c5 0%, #37a7e5 100%);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 20px rgba(55, 167, 229, 0.19);
+  color: #fff;
+}
+
 footer {
   text-align: center;
   color: #888;
-  margin: 2em 0 0 0;
+  margin: 2.5em 0 0 0;
+  font-size: 1em;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1.1em 0.5em;
+    max-width: 98vw;
+  }
+  header h1 {
+    font-size: 1.2em;
+  }
+  nav a {
+    font-size: 0.98em;
+    margin: 0 0.7em;
+  }
+  .item {
+    padding: 1em 0.3em;
+  }
+  .order-btn {
+    width: 100%;
+    padding: 1em 0;
+    font-size: 1em;
+  }
 }
