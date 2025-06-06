@@ -36,6 +36,7 @@
       <h2>お支払い方法</h2>
       <div class="pay-methods">
         <div class="pay-card">
+          <img src="images/paypay.png" alt="PayPay" class="pay-logo">
           <h3>PayPay</h3>
           <ul>
             <li>paypayリンクで簡単送金</li>
@@ -43,6 +44,7 @@
           </ul>
         </div>
         <div class="pay-card">
+          <img src="images/apple.png" alt="Apple ギフトカード" class="pay-logo">
           <h3>Apple ギフトカード</h3>
           <ul>
             <li>Apple ギフトカードのバリアブルコードで送金</li>
@@ -50,19 +52,14 @@
           </ul>
         </div>
         <div class="pay-card">
+          <img src="images/google.png" alt="Google Play ギフトカード" class="pay-logo">
           <h3>Google Play ギフトカード</h3>
           <ul>
-            <li>Google Pay ギフトカードのバリアブルコードで送金</li>
+            <li>Google Play ギフトカードのバリアブルコードで送金</li>
             <li>Googleフォームにコードを入力</li>
           </ul>
         </div>
       </div>
-    </section>
-
-    <section style="margin-top:2.5em;">
-      <h2>ご注文フォーム</h2>
-      <p style="margin-bottom:1.2em;">以下のフォームよりご注文内容・支払い情報をご入力ください。ご入金が確認でき次第、メールアドレス宛にコードを送付します。</p>
-      <iframe src="https://forms.gle/7DLMLoZKDmEXDRpn6" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" style="background:#fff;border-radius:12px;">読み込んでいます…</iframe>
     </section>
   </main>
   <footer>
@@ -84,19 +81,34 @@
       max-width: 340px;
       box-shadow: 0 2px 14px #37a7e528;
       flex: 1 1 230px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
     .pay-card h3 {
-      margin: 0 0 0.7em 0;
+      margin: 0.8em 0 0.7em 0;
       color: #37a7e5;
       font-size: 1.16em;
     }
     .pay-card ul {
       margin: 0;
       padding-left: 1.1em;
+      text-align: left;
     }
     .pay-card li {
       margin-bottom: 0.3em;
       font-size: 0.97em;
+    }
+    .pay-logo {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      margin-bottom: 0.2em;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 1px 8px #0003;
+      display: block;
     }
     @media (max-width: 800px) {
       .pay-methods {
