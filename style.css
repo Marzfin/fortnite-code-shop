@@ -237,4 +237,46 @@ footer {
   .items-grid {
     grid-template-columns: 1fr;
   }
+  .order-btn {
+  background: linear-gradient(90deg, #37a7e5 0%, #7ef7f7 100%);
+  color: #08121d;
+  padding: 1em 2.8em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 0.09em;
+  box-shadow: 0 2px 16px #37a7e57c, 0 1px 4px #08121d44;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 90%;
+  max-width: 220px;
+  margin-top: 1em;
+  transition: background 0.23s, color 0.24s, transform 0.21s, box-shadow 0.21s;
+}
+.order-btn::before {
+  content: "";
+  position: absolute;
+  left: -30%;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, #fff8 0%, #37a7e5aa 100%);
+  opacity: 0.25;
+  transform: skewX(-25deg);
+  transition: left 0.3s;
+  z-index: 0;
+}
+.order-btn:hover {
+  background: linear-gradient(90deg, #7ef7f7 0%, #37a7e5 100%);
+  color: #fff;
+  transform: scale(1.06);
+  box-shadow: 0 6px 32px #7ef7f7b0, 0 2px 8px #37a7e599;
+}
+.order-btn:hover::before {
+  left: 110%;
+}
 }
