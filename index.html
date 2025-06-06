@@ -17,6 +17,7 @@
   </header>
   <main>
     <h2>商品一覧</h2>
+    <input type="text" id="searchInput" placeholder="商品名で検索" style="margin-bottom: 1.5em; padding: 0.5em; width: 60%; max-width: 340px; border-radius: 6px; border: 1px solid #37a7e5; background: #162233; color: #fff;">
     <section class="item">
       <h3>V-Bucks 1,000円分</h3>
       <img src="1000v.jpg" alt="1000V-Bucks" width="200">
@@ -26,14 +27,28 @@
     </section>
     <section class="item">
       <h3>V-Bucks 2,800円分</h3>
-      <img src="https://fortniteexample.com/vbucks2.jpg" alt="V-Bucks" width="200">
+      <img src="vbucks2.jpg" alt="V-Bucks 2,800円分" width="200">
       <p>価格：2,800円</p>
       <p>お得な大容量パック！</p>
       <a class="order-btn" href="https://docs.google.com/forms/d/e/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/viewform?usp=pp_url&entry.1234567890=V-Bucks+2,800円分" target="_blank">購入する</a>
     </section>
+    <!-- 他の商品も同様に<section class="item">で追加OK -->
   </main>
   <footer>
     &copy; 2025 フォートナイトコードショップ
   </footer>
+  <script>
+    document.getElementById('searchInput').addEventListener('input', function() {
+      const keyword = this.value.toLowerCase();
+      document.querySelectorAll('.item').forEach(function(item) {
+        const title = item.querySelector('h3');
+        if (title && title.textContent.toLowerCase().includes(keyword)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
