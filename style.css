@@ -206,4 +206,69 @@ border-radius: 4px;
 padding: 2px 6px;
 text-decoration: none;
 }
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2em;
+  margin-top: 1.5em;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(110deg, #232526 60%, #37a7e5 140%);
+  border-radius: 14px;
+  box-shadow: 0 2px 18px #37a7e524;
+  padding: 2em 1.2em 1.5em 1.2em;
+  min-height: 390px;        /* カード全体の高さを揃える */
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #232526;
+  transition: box-shadow 0.3s, transform 0.18s;
+}
+
+.item img {
+  width: 180px;             /* 画像の幅を統一 */
+  height: 180px;            /* 画像の高さも統一 */
+  object-fit: contain;      /* 画像比率を維持して枠内に収める */
+  border-radius: 10px;
+  box-shadow: 0 2px 14px #0006;
+  margin-bottom: 1.1em;
+  background: #222c;
+  display: block;
+}
+
+.item h3 {
+  margin: 0 0 0.7em 0;
+  font-size: 1.18em;
+  text-align: center;
+}
+
+.item p {
+  margin: 0 0 0.5em 0;
+  font-size: 1em;
+  text-align: center;
+}
+
+.item .order-btn {
+  margin-top: auto;        /* ボタンを一番下に */
+  width: 90%;
+  max-width: 220px;
+}
+
+@media (max-width: 700px) {
+  .items-grid {
+    grid-template-columns: 1fr;
+  }
+  .item {
+    min-height: 320px;
+    padding: 1em 0.3em;
+  }
+  .item img {
+    width: 130px;
+    height: 130px;
+  }
 }
