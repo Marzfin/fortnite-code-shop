@@ -2,123 +2,33 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>購入とお支払い方法 | フォートナイトコードショップ</title>
+  <title>ショップ情報 | フォートナイトコードショップ</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>購入とお支払い方法</h1>
+    <h1>ショップ情報</h1>
     <nav>
       <a href="index.html">商品一覧</a>
-      <a href="order.html">購入・お支払い</a>
+      <a href="order.html">購入・お支払い方法</a>
       <a href="about.html">ショップ情報</a>
       <a href="contact.html">お問い合わせ</a>
     </nav>
   </header>
   <main>
-    <h2>ご購入の流れ</h2>
-    <ol>
-      <li>商品一覧から「購入する」ボタンを押してください。</li>
-      <li>Googleフォームが開きますので、下記の項目を入力してください。
-        <ul>
-          <li>購入希望商品名</li>
-          <li>お支払い方法の選択（PayPay / Apple / Google Play）</li>
-          <li>PayPayの場合はpaypayリンク、AppleやGoogleの場合はコード</li>
-          <li>名前（本名でなくてもOK）</li>
-          <li>メールアドレス（商品コード送付先）</li>
-        </ul>
-      </li>
-      <li>入力内容を送信してください。</li>
-      <li>ご入金確認後、ご入力いただいたメールアドレスへコードを送付します。</li>
-    </ol>
-
-    <section style="margin-top:2.5em;">
-      <h2>お支払い方法</h2>
-      <div class="pay-methods">
-        <div class="pay-card">
-          <img src="images/paypay.png" alt="PayPay" class="pay-logo">
-          <h3>PayPay</h3>
-          <ul>
-            <li>paypayリンクで簡単送金</li>
-            <li>paypayアプリにてリンクを作成後、Googleフォームにpaypayリンクを入力</li>
-          </ul>
-        </div>
-        <div class="pay-card">
-          <img src="images/apple.png" alt="Apple ギフトカード" class="pay-logo">
-          <h3>Apple ギフトカード</h3>
-          <ul>
-            <li>Apple ギフトカードのバリアブルコードで送金</li>
-            <li>Googleフォームにコードを入力</li>
-          </ul>
-        </div>
-        <div class="pay-card">
-          <img src="images/Google.png" alt="Google Play ギフトカード" class="pay-logo">
-          <h3>Google Play ギフトカード</h3>
-          <ul>
-            <li>Google Play ギフトカードのバリアブルコードで送金</li>
-            <li>Googleフォームにコードを入力</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <h2>特定商取引法に基づく表記</h2>
+    <ul>
+      <li>販売事業者：Marz</li>
+      <li>商品代金以外の必要料金：なし</li>
+      <li>引き渡し時期：入金確認後24時間以内にメール送付</li>
+      <li>返品について：デジタル商品のため返品不可</li>
+      <li>お支払い方法：PayPay、Appleギフトカード、Google Playギフトカード</li>
+    </ul>
+    <h2>お問い合わせ</h2>
+    <p>ご質問は【お問い合わせ】よりご連絡ください。</p>
   </main>
   <footer>
     &copy; 2025 フォートナイトコードショップ
   </footer>
-  <style>
-    .pay-methods {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2em;
-      margin-top: 1em;
-      justify-content: flex-start;
-    }
-    .pay-card {
-      background: linear-gradient(110deg, #222d 60%, #37a7e5 140%);
-      border-radius: 12px;
-      padding: 1.3em 1.8em 1.3em 1.4em;
-      min-width: 240px;
-      max-width: 340px;
-      box-shadow: 0 2px 14px #37a7e528;
-      flex: 1 1 230px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .pay-card h3 {
-      margin: 0.8em 0 0.7em 0;
-      color: #37a7e5;
-      font-size: 1.16em;
-    }
-    .pay-card ul {
-      margin: 0;
-      padding-left: 1.1em;
-      text-align: left;
-    }
-    .pay-card li {
-      margin-bottom: 0.3em;
-      font-size: 0.97em;
-    }
-    .pay-logo {
-      width: 90px;
-      height: 90px;
-      object-fit: contain;
-      margin-bottom: 0.2em;
-      border-radius: 10px;
-      background: #fff;
-      box-shadow: 0 1px 8px #0003;
-      display: block;
-    }
-    @media (max-width: 800px) {
-      .pay-methods {
-        flex-direction: column;
-        gap: 1em;
-      }
-      .pay-card {
-        max-width: 100%;
-      }
-    }
-  </style>
 </body>
 </html>
