@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>レビュー一覧 | フォートナイトコードショップ</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .reviews {
+      margin: 2.5em auto;
+      max-width: 900px;
+      background: rgba(30, 40, 60, 0.96);
+      padding: 2em 1em;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px #37a7e524;
+    }
+    .reviews h2 {
+      color: #37a7e5;
+      font-size: 1.3em;
+      margin-bottom: 1.8em;
+      text-align: center;
+      letter-spacing: 0.09em;
+    }
+    .review-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+    }
+    .review {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5em;
+      align-items: flex-start;
+      background: linear-gradient(100deg, #232526 60%, #37a7e5 140%);
+      border-radius: 12px;
+      padding: 1.3em 1.2em;
+      box-shadow: 0 1px 8px #0002;
+    }
+    .review-product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 120px;
+      max-width: 140px;
+    }
+    .review-product-img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      border-radius: 7px;
+      margin-bottom: 0.8em;
+      background: #fff;
+      box-shadow: 0 1px 8px #2222;
+      display: block;
+    }
+    .review-product-name {
+      font-weight: bold;
+      color: #aafaff;
+      font-size: 0.98em;
+      text-align: center;
+    }
+    .review-detail {
+      flex: 1 1 200px;
+    }
+    .review-meta {
+      font-size: 0.97em;
+      color: #ace8ff;
+      margin-bottom: 0.5em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2em;
+      align-items: center;
+    }
+    .review-stars {
+      color: gold;
+      font-weight: bold;
+      letter-spacing: 0.07em;
+      font-size: 1.1em;
+    }
+    .review-comment p {
+      margin: 0;
+      color: #fff;
+      font-size: 1em;
+    }
+    @media (max-width:700px) {
+      .reviews {
+        padding: 1em 0.3em;
+      }
+      .review-list {
+        gap: 1em;
+      }
+      .review {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1em 0.5em;
+      }
+      .review-product {
+        flex-direction: row;
+        align-items: center;
+        gap: 1em;
+        min-width: 0;
+        max-width: 100%;
+        margin-bottom: 0;
+      }
+      .review-product-img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>レビュー一覧</h1>
+    <nav>
+      <a href="index.html">商品一覧</a>
+      <a href="order.html">購入・お支払い方法</a>
+      <a href="about.html">ショップ情報</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="review.html">レビュー</a>
+    </nav>
+  </header>
+  <main>
+    <section class="reviews">
+      <h2>お客様のレビュー</h2>
+      <div class="review-list">
+        <!-- レビュー1 -->
+        <div class="review">
+          <div class="review-product">
+            <img src="images/eon.jpg" alt="イーオンパック" class="review-product-img">
+            <span class="review-product-name">イーオンパック eon</span>
+          </div>
+          <div class="review-detail">
+            <div class="review-meta">
+              <span class="review-user">購入者：たかし</span>
+              <span class="review-date">2025/06/05</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <div class="review-comment">
+              <p>対応が早くて安心して購入できました！また利用します。</p>
+            </div>
+          </div>
+        </div>
+        <!-- レビュー2 -->
+        <div class="review">
+          <div class="review-product">
+            <img src="images/rocket.jpg" alt="ロケットロデオ" class="review-product-img">
+            <span class="review-product-name">ロケットロデオ rocket rodeo</span>
+          </div>
+          <div class="review-detail">
+            <div class="review-meta">
+              <span class="review-user">購入者：ユーザーA</span>
+              <span class="review-date">2025/06/03</span>
+              <span class="review-stars">★★★★☆</span>
+            </div>
+            <div class="review-comment">
+              <p>コードもすぐ届きました。星4つですが満足です！</p>
+            </div>
+          </div>
+        </div>
+        <!-- レビュー3（例） -->
+        <div class="review">
+          <div class="review-product">
+            <img src="images/skinA.jpg" alt="スキンA" class="review-product-img">
+            <span class="review-product-name">スキンA</span>
+          </div>
+          <div class="review-detail">
+            <div class="review-meta">
+              <span class="review-user">購入者：みさき</span>
+              <span class="review-date">2025/06/01</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <div class="review-comment">
+              <p>限定スキンが買えて嬉しい！丁寧な対応でした。</p>
+            </div>
+          </div>
+        </div>
+        <!-- ここにレビューを追加していけます -->
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 フォートナイトコードショップ
+  </footer>
+</body>
+</html>
