@@ -69,6 +69,17 @@ nav a:hover::before {
   left: 0;
 }
 
+/* ★今いるページだけ色を変える★ */
+nav a.active {
+  background: linear-gradient(90deg, #7ef7f7 0%, #37a7e5 100%);
+  color: #08121d !important;
+  box-shadow: 0 4px 20px #7ef7f799, 0 2px 8px #37a7e599;
+  transform: scale(1.08);
+  font-weight: 900;
+  border: 2px solid #37a7e5;
+  z-index: 1;
+}
+
 main {
   max-width: 1100px;
   margin: 2.5em auto;
@@ -139,7 +150,8 @@ h2 {
   text-align: center;
 }
 
-.item .order-btn {
+.item .order-btn,
+.order-btn {
   margin-top: auto;
   width: 90%;
   max-width: 220px;
@@ -159,7 +171,8 @@ h2 {
   overflow: hidden;
   transition: background 0.23s, color 0.24s, transform 0.21s, box-shadow 0.21s;
 }
-.item .order-btn::before {
+.item .order-btn::before,
+.order-btn::before {
   content: "";
   position: absolute;
   left: -30%;
@@ -172,13 +185,15 @@ h2 {
   transition: left 0.3s;
   z-index: 0;
 }
-.item .order-btn:hover {
+.item .order-btn:hover,
+.order-btn:hover {
   background: linear-gradient(90deg, #7ef7f7 0%, #37a7e5 100%);
   color: #fff;
   transform: scale(1.06);
   box-shadow: 0 6px 32px #7ef7f7b0, 0 2px 8px #37a7e599;
 }
-.item .order-btn:hover::before {
+.item .order-btn:hover::before,
+.order-btn:hover::before {
   left: 110%;
 }
 
@@ -229,7 +244,8 @@ footer {
     width: 130px;
     height: 130px;
   }
-  .item .order-btn {
+  .item .order-btn,
+  .order-btn {
     width: 100%;
     padding: 1em 0;
     font-size: 1em;
@@ -237,55 +253,4 @@ footer {
   .items-grid {
     grid-template-columns: 1fr;
   }
-  .order-btn {
-  background: linear-gradient(90deg, #37a7e5 0%, #7ef7f7 100%);
-  color: #08121d;
-  padding: 1em 2.8em;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 1.1em;
-  font-weight: bold;
-  letter-spacing: 0.09em;
-  box-shadow: 0 2px 16px #37a7e57c, 0 1px 4px #08121d44;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  width: 90%;
-  max-width: 220px;
-  margin-top: 1em;
-  transition: background 0.23s, color 0.24s, transform 0.21s, box-shadow 0.21s;
-}
-.order-btn::before {
-  content: "";
-  position: absolute;
-  left: -30%;
-  top: 0;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(120deg, #fff8 0%, #37a7e5aa 100%);
-  opacity: 0.25;
-  transform: skewX(-25deg);
-  transition: left 0.3s;
-  z-index: 0;
-}
-.order-btn:hover {
-  background: linear-gradient(90deg, #7ef7f7 0%, #37a7e5 100%);
-  color: #fff;
-  transform: scale(1.06);
-  box-shadow: 0 6px 32px #7ef7f7b0, 0 2px 8px #37a7e599;
-}
-.order-btn:hover::before {
-  left: 110%;
-}
-nav a.active {
-  background: linear-gradient(90deg, #7ef7f7 0%, #37a7e5 100%);
-  color: #08121d !important;
-  box-shadow: 0 4px 20px #7ef7f799, 0 2px 8px #37a7e599;
-  transform: scale(1.08);
-  font-weight: 900;
-  border: 2px solid #37a7e5;
-  z-index: 1;
-}
 }
