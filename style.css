@@ -279,4 +279,13 @@ footer {
 .order-btn:hover::before {
   left: 110%;
 }
+nav a.active {
+  background: linear-gradient(90deg, #7ef7f7 0%, #37a7e5 100%);
+  color: #08121d !important;
+  box-shadow: 0 4px 20px #7ef7f799, 0 2px 8px #37a7e599;
+  transform: scale(1.08);
+  font-weight: 900;
+  border: 2px solid #37a7e5;
+  z-index: 1;
+}
 }
