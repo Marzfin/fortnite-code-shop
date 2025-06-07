@@ -4,40 +4,83 @@
   <meta charset="UTF-8">
   <title>ショップ情報 | フォートナイトコードショップ</title>
   <link rel="stylesheet" href="style.css">
+  <!-- ファビコン追加（必要に応じてファイル名変更） -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <style>
+    .header-bar {
+      position: relative;
+      width: 100%;
+      min-height: 38px;
+      margin-bottom: 2px;
+    }
+    .site-logo {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      object-fit: contain;
+      background: #fff;
+      box-shadow: 0 1px 8px #37a7e544;
+      z-index: 2;
+    }
+    .header-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      pointer-events: none;
+    }
+    @media (max-width: 700px) {
+      .header-bar {
+        min-height: 32px;
+      }
+      .site-logo {
+        width: 32px;
+        height: 32px;
+        left: 8px;
+      }
+    }
+  </style>
 </head>
 <body>
 <header>
-  <div style="text-align:center;">
-    <span style="display:block; font-size:2.1em; font-weight:900; letter-spacing:0.09em; color:#37a7e5; text-shadow:0 2px 16px #37a7e5cc, 0 1px 1px #232526;">
-      フォートナイトコードショップ
-    </span>
-    <span class="made-by" style="display:block; font-size:0.85em; font-weight:normal; color:#aafaff; margin:0.2em 0 0.7em 0; letter-spacing:0.07em;">
-      made by Marz
-    </span>
+  <div class="header-bar">
+    <img src="images/logo.png" alt="ショップロゴ" class="site-logo">
+    <div class="header-center">
+      <span style="display:block; font-size:2.1em; font-weight:900; letter-spacing:0.09em; color:#37a7e5; text-shadow:0 2px 16px #37a7e5cc, 0 1px 1px #232526;">
+        フォートナイトコードショップ
+      </span>
+      <span class="made-by" style="display:block; font-size:0.85em; font-weight:normal; color:#aafaff; margin:0.2em 0 0.7em 0; letter-spacing:0.07em;">
+        made by Marz
+      </span>
+    </div>
   </div>
   <nav>
-    <nav>
-      <a href="index.html">商品一覧</a>
-      <a href="order.html">購入・お支払い方法</a>
-      <a href="review.html">お客様のレビュー</a>
-      <a href="about.html" class="active">ショップ情報</a>
-      <a href="contact.html">お問い合わせ</a>
-    </nav>
-  </header>
-  <main>
-    <h2>特定商取引法に基づく表記</h2>
-    <ul>
-      <li>販売事業者：Marz</li>
-      <li>商品代金以外の必要料金：なし</li>
-      <li>引き渡し時期：入金確認後24時間以内にメール送付</li>
-      <li>返品について：デジタル商品のため返品不可</li>
-      <li>お支払い方法：PayPay、Appleギフトカード、Google Playギフトカード</li>
-    </ul>
-    <h2>お問い合わせ</h2>
-    <p>ご質問は<a href="contact.html" class="discord-link">【お問い合わせ】</a>よりご連絡ください。</p>
-  </main>
-  <footer>
-    &copy; 2025 Marz All rights reserved.
-  </footer>
+    <a href="index.html">商品一覧</a>
+    <a href="order.html">購入・お支払い方法</a>
+    <a href="review.html">お客様のレビュー</a>
+    <a href="about.html" class="active">ショップ情報</a>
+    <a href="contact.html">お問い合わせ</a>
+  </nav>
+</header>
+<main>
+  <h2>特定商取引法に基づく表記</h2>
+  <ul>
+    <li>販売事業者：Marz</li>
+    <li>商品代金以外の必要料金：なし</li>
+    <li>引き渡し時期：入金確認後24時間以内にメール送付</li>
+    <li>返品について：デジタル商品のため返品不可</li>
+    <li>お支払い方法：PayPay、Appleギフトカード、Google Playギフトカード</li>
+  </ul>
+  <h2>お問い合わせ</h2>
+  <p>ご質問は<a href="contact.html" class="discord-link">【お問い合わせ】</a>よりご連絡ください。</p>
+</main>
+<footer>
+  &copy; 2025 Marz All rights reserved.
+</footer>
 </body>
 </html>
