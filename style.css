@@ -17,19 +17,18 @@ header {
   position: relative;
 }
 
-/* ヘッダーバー（ロゴとタイトルの中央配置） */
 .header-bar {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center; /* タイトルを中央に */
+  justify-content: center;
   margin-bottom: 2px;
   width: 100%;
   min-height: 38px;
 }
 .site-logo {
   position: absolute;
-  left: 32px; /* 左端から少し右へ寄せる */
+  left: 32px;
   top: 50%;
   transform: translateY(-50%);
   width: 42px;
@@ -102,8 +101,6 @@ nav a:hover {
 nav a:hover::before {
   left: 0;
 }
-
-/* ★今いるページだけ色を変える★ */
 nav a.active {
   background: linear-gradient(90deg, #7ef7f7 0%, #37a7e5 100%);
   color: #08121d !important;
@@ -138,7 +135,6 @@ h2 {
   gap: 2em;
   margin-top: 1.5em;
 }
-
 .item {
   display: flex;
   flex-direction: column;
@@ -155,13 +151,11 @@ h2 {
   border: 2px solid #232526;
   transition: box-shadow 0.3s, transform 0.18s;
 }
-
 .item:hover {
   box-shadow: 0 10px 32px #37a7e549, 0 5px 20px #252b378c;
   transform: translateY(-2px) scale(1.025);
   border-color: #37a7e5;
 }
-
 .item img {
   width: 180px;
   height: 180px;
@@ -172,19 +166,16 @@ h2 {
   background: #222c;
   display: block;
 }
-
 .item h3 {
   margin: 0 0 0.7em 0;
   font-size: 1.18em;
   text-align: center;
 }
-
 .item p {
   margin: 0 0 0.5em 0;
   font-size: 1em;
   text-align: center;
 }
-
 .item .order-btn,
 .order-btn {
   margin-top: auto;
@@ -255,6 +246,13 @@ footer {
   text-decoration: none;
 }
 
+/* ------ 1行目だけ1商品中央配置 ------ */
+.item.single-row {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 320px;
+}
+/* スマホ時は1列なので幅を100%に */
 @media (max-width: 700px) {
   main {
     padding: 1.1em 0.4em;
@@ -287,5 +285,8 @@ footer {
   }
   .items-grid {
     grid-template-columns: 1fr;
+  }
+  .item.single-row {
+    width: 100%;
   }
 }
