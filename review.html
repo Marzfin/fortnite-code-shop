@@ -169,9 +169,9 @@
   <main>
     <section class="reviews">
       <h2>お客様のレビュー</h2>
-      <div class="review-list">
+      <div class="review-list" id="reviews">
         <!-- レビュー1 -->
-        <div class="review">
+        <div class="review" data-date="2025-06-01">
           <div class="review-product">
             <img src="images/agency rene.jpg" alt="エージェンシーレネゲードパック" class="review-product-img">
             <span class="review-product-name">エージェンシーレネゲードパック</span>
@@ -188,7 +188,7 @@
           </div>
         </div>
         <!-- レビュー2 -->
-        <div class="review">
+        <div class="review" data-date="2025-06-01">
           <div class="review-product">
             <img src="images/IMG_1502.jpg" alt="ゴールデンタッチクエストパック" class="review-product-img">
             <span class="review-product-name">ゴールデンタッチクエストパック </span>
@@ -204,8 +204,8 @@
             </div>
           </div>
         </div>
-        <!-- レビュー3（例） -->
-        <div class="review">
+        <!-- レビュー3 -->
+        <div class="review" data-date="2025-06-01">
           <div class="review-product">
             <img src="images/skinA.jpg" alt="スキンA" class="review-product-img">
             <span class="review-product-name">スキンA</span>
@@ -221,12 +221,19 @@
             </div>
           </div>
         </div>
-        <!-- ここにレビューを追加していけます -->
+        <!-- ここにレビューを追加していけます。data-dateに必ず日付を入れてください -->
       </div>
     </section>
   </main>
   <footer>
     &copy; 2025 Marz. All rights reserved.
   </footer>
+  <script>
+    // レビューをdata-date属性で新しい順に並べ替える
+    const reviewsContainer = document.getElementById('reviews');
+    const reviews = Array.from(reviewsContainer.querySelectorAll('.review'));
+    reviews.sort((a, b) => b.dataset.date.localeCompare(a.dataset.date));
+    reviews.forEach(r => reviewsContainer.appendChild(r));
+  </script>
 </body>
 </html>
