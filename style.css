@@ -176,6 +176,22 @@ h2 {
   font-size: 1em;
   text-align: center;
 }
+
+/* 価格強調 */
+.price {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ffd700;
+  background: #222d;
+  padding: 0.2em 0.7em;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 0.5em;
+  box-shadow: 0 2px 8px #ffd70044;
+  letter-spacing: 0.06em;
+}
+
+/* 購入ボタン */
 .item .order-btn,
 .order-btn {
   margin-top: auto;
@@ -252,7 +268,7 @@ footer {
   justify-self: center;
   width: 320px;
 }
-/* スマホ時は1列なので幅を100%に */
+/* スマホ時は1列なので幅を90%・ボタン幅も調整 */
 @media (max-width: 700px) {
   main {
     padding: 1.1em 0.4em;
@@ -279,7 +295,10 @@ footer {
   }
   .item .order-btn,
   .order-btn {
-    width: 100%;
+    width: 90%;
+    max-width: 240px;
+    margin: 0 auto;
+    display: block;
     padding: 1em 0;
     font-size: 1em;
   }
